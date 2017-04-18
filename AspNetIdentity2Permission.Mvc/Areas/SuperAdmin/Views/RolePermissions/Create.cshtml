@@ -82,7 +82,7 @@
             data[j] = rowData;
         }
         //提交服务端保存
-        $.post("/RolePermissions/Create",
+        $.post("/SuperAdmin/RolePermissions/Create",
             {
                 "__RequestVerificationToken": token,
                 "roleId": roleId,
@@ -91,7 +91,7 @@
         function (result) {
             if (result.Success) {
                 //跳转到Index
-                window.location = "/RolePermissions/Index?roleId=" + roleId;
+                window.location = "/SuperAdmin/RolePermissions/Index?roleId=" + roleId;
             }
             else {
                 //刷新当前

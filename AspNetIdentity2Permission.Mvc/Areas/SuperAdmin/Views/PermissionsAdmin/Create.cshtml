@@ -83,7 +83,7 @@
         }
 
         //提交服务端保存
-        $.post("/PermissionsAdmin/Create",
+        $.post("/SuperAdmin/PermissionsAdmin/Create",
             {
                 "__RequestVerificationToken": token,
                 "data": data
@@ -93,7 +93,7 @@
                 var result = eval("(" + jsonStr + ")");
                 if (result.Success) {
                     //跳转到Index
-                    window.location = "/PermissionsAdmin/Index";
+                    window.location = "/SuperAdmin/PermissionsAdmin/Index";
                 }
                 else {
                     //刷新当前
